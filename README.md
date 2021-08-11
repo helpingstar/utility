@@ -11,12 +11,16 @@ ex)
 test1 파일
 
 hello
+
 world
+
 
 변환 후
 
 XXX_0001.txt
+
 hello
 
 XXX_0002.txt
+
 world
