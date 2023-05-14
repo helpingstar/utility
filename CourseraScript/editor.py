@@ -2,10 +2,19 @@ import os
 
 subtitle_dir = 'CourseraScript'
 chapter = 3
-week = 3
+week = 4
 
-file_list = sorted(os.listdir(os.path.join(subtitle_dir, 'script')))
+check_cw = input(f'{chapter}-{week} if Right, type "y"\n')
+if check_cw != 'y':
+    exit(0)
 
+file_list = sorted(os.listdir(os.path.join(subtitle_dir, 'script')), key=lambda x: (len(x), x))
+
+check_cw = input(f'check order:\n {file_list}\n')
+if check_cw != 'y':
+    exit(0)
+
+print(file_list)
 w_file = open(os.path.join(subtitle_dir, 'merged_script', f'{chapter}-{week}.txt'), 'w')
 w_file.write(f'[{chapter}-{week}]\n\n')
 
